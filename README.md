@@ -18,3 +18,8 @@ You can download release build v0.0.1-SNAPSHOT and run it like:
 
 Documentation is available using swagger at:\
 [Swagger-UI](http://localhost:8080/swagger-ui/index.html)
+
+## Conclusion
+
+After start applications will run on address:\
+[http://localhost:8080](http://localhost:8080)
