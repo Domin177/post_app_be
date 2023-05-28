@@ -9,9 +9,9 @@ import lombok.Setter;
 @Setter
 public class PostEditRequest {
     @NotBlank(message = "Title cannot be empty")
-    @Size(max = 255)
+    @Size( min = 1, max = 255)
     private String title;
     @NotBlank(message = "Body cannot be empty")
-    @Size(max = 500)
+    @Size(min = 1, max = 500)
     private String body;
 }

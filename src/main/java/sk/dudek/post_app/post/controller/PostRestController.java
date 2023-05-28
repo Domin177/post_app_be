@@ -43,7 +43,7 @@ public class PostRestController {
                 postService.updatePost(id, postRequest)
         ));
     }
-    @Operation(summary = "Get a post by id")
+    @Operation(summary = "Get post by ID. If not found it will try to find post using external API")
     @ApiResponses({
             @ApiResponse(responseCode = "200", description = "The post was found"),
             @ApiResponse(responseCode = "404", description = "The post was not found")
@@ -52,7 +52,7 @@ public class PostRestController {
     public ResponseEntity<?> getPostById(@PathVariable Integer id) {
         return ResponseEntity.ok(postService.getPostById(id));
     }
-    @Operation(summary = "Get a post by userId")
+    @Operation(summary = "Get a post by user ID")
     @ApiResponses({
             @ApiResponse(responseCode = "200", description = "The post was found"),
             @ApiResponse(responseCode = "404", description = "The post was not found")
@@ -61,7 +61,7 @@ public class PostRestController {
     public ResponseEntity<?> getPostsByUserId(@PathVariable Integer userId) {
         return ResponseEntity.ok(postService.getPostsByUserId(userId));
     }
-    @Operation(summary = "Delete post by id")
+    @Operation(summary = "Delete post by ID")
     @ApiResponses({
             @ApiResponse(responseCode = "200", description = "The post has been successfully deleted"),
             @ApiResponse(responseCode = "404", description = "The post was not found")
